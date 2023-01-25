@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">AutoTest</h1>
+    <p>Bitta Tilda 700dan ortiq bolgan savollar Testlari</p>
+</div>
+
+
+@if (ViewBag.IsLogin == false)
+{
+    <div class="text-center">
+        <a class="btn1 btn btn-light mb-3" asp-controller="User" asp-action="SignUp">SignUp</a><br />
+        <a class="btn1 btn btn-dark" asp-controller="User" asp-action="SignIn">Sign in</a>
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <a class="btn2 btn btn-primary mb-3" asp-controller="Examination" asp-action="Index">Examination</a><br/>
+        <a class="btn2 btn btn-primary" asp-controller="Ticket" asp-action="Index">Ticket</a>
+    </div>
+}
+
+ <style>
+    .btn1 {
+        width: 250px;
+        border-radius: 10px;
+    }    
+    .btn2 {
+        width: 250px;
+        border-radius: 10px;
+    }
+ </style>

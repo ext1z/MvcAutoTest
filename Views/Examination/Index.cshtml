@@ -1,0 +1,25 @@
+﻿@model Ticket
+@{
+    ViewData["Title"] = "Examination";
+}
+
+<div class="text-center" style="margin-top: 100px; border: 5px solid black; border-radius: 10px; width: 600px; padding: 20px;">
+<h1>Examination</h1>
+
+<h2>Ticket : @Model.Id</h2>
+<h2>Count : @Model.QuestionsCount</h2>
+
+<a class="btn btn-primary mb-3"
+style="width: 250px; border-radius: 10px;"
+asp-action="Exam"
+asp-route-ticketId=@Model.Id
+asp-route-questionId=@Model.FromIndex>Start</a>
+</div>
+
+<style>
+    main{
+        display: flex;
+        justify-content: center;
+
+    }
+</style>
