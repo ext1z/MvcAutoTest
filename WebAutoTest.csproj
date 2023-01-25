@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SqlDbAutoTest\SqlDbAutoTest.csproj" />
+  </ItemGroup>
+
 </Project>
